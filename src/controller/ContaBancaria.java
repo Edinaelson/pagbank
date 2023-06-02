@@ -11,6 +11,10 @@ public class ContaBancaria implements MovimentacaoBancaria{
         this.saldo = saldo;
     }
 
+    public ContaBancaria() {
+
+    }
+
     public void setNumeroConta(String numeroConta) {
         this.numeroConta = numeroConta;
     }
