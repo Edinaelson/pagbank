@@ -14,7 +14,8 @@ public class ContaCorrente extends ContaBancaria{
     public void sacar(double valor) throws Exception {
         if(valor > getSaldo() && valor <= limiteChequeEspecial){
             this.limiteChequeEspecial -= valor;
-            System.out.printf("Limite Especial: " + limiteChequeEspecial+"\n");
+            Colors.cyanColor("Limite Especial: " + limiteChequeEspecial);
+            //System.out.printf("Limite Especial: " + limiteChequeEspecial+"\n");
         } else if(valor <= getSaldo()){
             super.sacar(valor);
         } else {

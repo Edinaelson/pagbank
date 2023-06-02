@@ -1,9 +1,12 @@
 package exceçoes;
 
+import controller.Colors;
+
 public class SaldoInsuficiente extends Exception {
     
     public SaldoInsuficiente(){
-        System.out.println("Saldo insuficiente para saque! \n");
+        Colors.redColor("Saldo insuficiente para saque! \n");
+        //System.out.println("Saldo insuficiente para saque! \n");
     }
 
     @Override

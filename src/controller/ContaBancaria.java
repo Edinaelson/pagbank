@@ -33,7 +33,9 @@ public class ContaBancaria implements MovimentacaoBancaria{
     @Override
     public void depositar(double valor) {
         this.saldo+= valor;
-        System.out.println("Deposito realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
+        Colors.greenColor("Deposito realizado com sucesso!");
+        Colors.blueColor("Valor em saldo: " + this.saldo);
+        //System.out.println("Deposito realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
     }
 
     @Override
@@ -42,9 +44,12 @@ public class ContaBancaria implements MovimentacaoBancaria{
         if(saldo < valor){
             throw new SaldoInsuficiente();
         }
-        else
+        else{
             this.saldo -= valor;
-            System.out.println("Saque realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
+            Colors.greenColor("Saque realizado com sucesso!");
+            Colors.blueColor("Valor em saldo: " + this.saldo);
+            //System.out.println("Saque realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
+        }
     }
     
 }

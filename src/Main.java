@@ -1,3 +1,4 @@
+import controller.Colors;
 import controller.ContaCorrente;
 import controller.ContaPoupanca;
 import exceçoes.SaldoInsuficiente;
@@ -18,7 +19,8 @@ public class Main {
             c2.sacar(1500);
 
         }catch (SaldoInsuficiente e){
-            System.out.println("Mensagem Error: " + e.getMessage());
+            Colors.redColor(e.getMessage());
+            //System.out.println("Mensagem Error: " + e.getMessage());
         }
     }
 }
