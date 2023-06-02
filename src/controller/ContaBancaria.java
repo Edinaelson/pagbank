@@ -33,17 +33,18 @@ public class ContaBancaria implements MovimentacaoBancaria{
     @Override
     public void depositar(double valor) {
         this.saldo+= valor;
-        System.out.println("Deposito realizado com sucesso!\n" + "Valor em saldo " + this.saldo);
+        System.out.println("Deposito realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
     }
 
     @Override
     public void sacar(double valor) throws Exception {
+        
         if(saldo < valor){
-            throw new SaldoInsuficiente(saldo);
+            throw new SaldoInsuficiente();
         }
         else
             this.saldo -= valor;
-            System.out.println("Saque realizado com sucesso!\n" + "Valor em saldo " + this.saldo);
+            System.out.println("Saque realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
     }
     
 }

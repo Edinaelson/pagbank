@@ -1,4 +1,5 @@
-import controller.ContaBancaria;
+package controller;
+
 
 public class ContaPoupanca extends ContaBancaria {
     private double taxaRendimento;
@@ -18,7 +19,8 @@ public class ContaPoupanca extends ContaBancaria {
     }
 
     public double calcularRendimento(){
-        return getSaldo() * taxaRendimento;
+        System.out.println("Taxa de Rendimento: " + taxaRendimento + "\n");
+        return taxaRendimento;
     }
 
 
