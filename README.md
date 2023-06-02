@@ -1,3 +1,3 @@
 # pagbank
-![01.png](img%2F01.png)
-![02.png](img%2F02.png)
+![img01.jpg](img%2Fimg01.jpg)
+![img02.jpg](img%2Fimg02.jpg)
