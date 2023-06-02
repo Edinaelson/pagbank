@@ -6,9 +6,7 @@ public class ContaCorrente extends ContaBancaria{
     private double limiteChequeEspecial;
 
     public ContaCorrente(String numeroConta, double saldo, double limiteChequeEspecial){
-        super();
-        setSaldo(saldo);
-        setNumeroConta(numeroConta);
+        super(numeroConta, saldo);
         this.limiteChequeEspecial = limiteChequeEspecial;
     }
 
@@ -16,11 +14,11 @@ public class ContaCorrente extends ContaBancaria{
     public void sacar(double valor) throws Exception {
         if(valor > getSaldo() && valor <= limiteChequeEspecial){
             this.limiteChequeEspecial -= valor;
-            System.out.printf("Limite E: " + limiteChequeEspecial);
-        } else if(valor >= getSaldo()){
+            System.out.printf("Limite Especial: " + limiteChequeEspecial+"\n");
+        } else if(valor <= getSaldo()){
             super.sacar(valor);
         } else {
-            throw new SaldoInsuficiente(valor);
+            throw new SaldoInsuficiente();
         }
     }
 }
