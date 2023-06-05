@@ -1,7 +1,7 @@
 import controller.Colors;
 import controller.ContaCorrente;
 import controller.ContaPoupanca;
-import exceçoes.SaldoInsuficiente;
+import exceptions.SaldoInsuficiente;
 
 public class Main {
     public static void main(String[] args) throws Exception {

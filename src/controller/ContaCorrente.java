@@ -1,6 +1,6 @@
 package controller;
 
-import exceçoes.SaldoInsuficiente;
+import exceptions.SaldoInsuficiente;
 
 public class ContaCorrente extends ContaBancaria{
     private double limiteChequeEspecial;

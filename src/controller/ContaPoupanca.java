@@ -19,7 +19,8 @@ public class ContaPoupanca extends ContaBancaria {
     }
 
     public double calcularRendimento(){
-        System.out.println("Taxa de Rendimento: " + taxaRendimento + "\n");
+        Colors.magentaColor("Taxa de Rendimento: " + taxaRendimento + "\n");
+        //System.out.println("Taxa de Rendimento: " + taxaRendimento + "\n");
         return taxaRendimento;
     }
 

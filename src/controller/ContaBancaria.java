@@ -1,5 +1,5 @@
 package controller;
-import exceçoes.SaldoInsuficiente;
+import exceptions.SaldoInsuficiente;
 import interfaces.MovimentacaoBancaria;
 
 public class ContaBancaria implements MovimentacaoBancaria{
@@ -35,7 +35,6 @@ public class ContaBancaria implements MovimentacaoBancaria{
         this.saldo+= valor;
         Colors.greenColor("Deposito realizado com sucesso!");
         Colors.blueColor("Valor em saldo: " + this.saldo);
-        //System.out.println("Deposito realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
     }
 
     @Override
@@ -48,7 +47,6 @@ public class ContaBancaria implements MovimentacaoBancaria{
             this.saldo -= valor;
             Colors.greenColor("Saque realizado com sucesso!");
             Colors.blueColor("Valor em saldo: " + this.saldo);
-            //System.out.println("Saque realizado com sucesso!\n" + "Valor em saldo: " + this.saldo);
         }
     }
     
